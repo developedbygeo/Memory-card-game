@@ -1,7 +1,8 @@
 const themeSettings = {
   colors: {
-    main: '#0d1a2d',
-    secondary: '#15273f',
+    main: '#120D31',
+    headerBg: '#2F2F4C',
+    secondary: '#302F4D',
     white: '#fefefe',
   },
 };

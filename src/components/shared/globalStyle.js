@@ -22,18 +22,20 @@ header{
 }
 
 main{
-    height: 85vh;
-    width: 90vw;
+    height: 87vh;
+    width: 100vw;
+    background: ${({ theme }) => theme.colors.main}
 }
 
 footer{
-    height: 5vh;
+    height: 3vh;
     width: 100%;
 }
 
 h1 {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-family: 'Abril Fatface', cursive;
+
 
 }
 
@@ -47,7 +49,7 @@ h3 {
   font-weight: 500;
 }
 
-h1, h2, h3{
+h2, h3{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
