@@ -1,12 +1,14 @@
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/macro';
 import themeSettings from './components/shared/themeSettings';
 import GlobalStyle from './components/shared/globalStyle';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <ThemeProvider theme={themeSettings}>
       <GlobalStyle />
-      <h1>Score</h1>
+      <Header />
+      <main></main>
     </ThemeProvider>
   );
 }
