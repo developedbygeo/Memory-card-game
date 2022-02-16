@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { gridMixin } from './mixins';
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -24,7 +25,8 @@ header{
 main{
     height: 87vh;
     width: 100vw;
-    background: ${({ theme }) => theme.colors.main}
+    background: ${({ theme }) => theme.colors.main};
+    ${gridMixin('1fr', '0.15fr 1fr')};
 }
 
 footer{
