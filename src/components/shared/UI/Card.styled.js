@@ -6,8 +6,8 @@ const maxCard = css`
 `;
 
 const standardCard = css`
-  height: ${({ height }) => height || '2rem'};
-  height: ${({ width }) => width || '2rem'};
+  height: ${({ height }) => height || 'auto'};
+  width: ${({ width }) => width || 'auto'};
 `;
 
 const getCardStyling = ({ max }) => {
@@ -19,9 +19,10 @@ const getCardStyling = ({ max }) => {
 };
 
 const Card = styled.div`
+  padding: 2rem;
   border-radius: 1rem;
   background: ${({ theme }) => theme.colors.secondary};
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
   ${getCardStyling}
 `;
 
