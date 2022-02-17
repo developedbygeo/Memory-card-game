@@ -3,11 +3,7 @@ import { flexMixin, gridMixin } from '../mixins';
 
 const getLayout = ({ flexSettings, gridSettings }) => {
   if (flexSettings) {
-    return flexMixin(
-      flexSettings.justify,
-      flexSettings.align,
-      flexSettings.dir
-    );
+    return flexMixin(flexSettings.justify, flexSettings.align, flexSettings.dir);
   }
   if (gridSettings) {
     return gridMixin(gridSettings.cols, gridSettings.rows);
@@ -26,4 +22,11 @@ export const StyledSection = styled.section`
       color: ${({ theme }) => theme.colors.white};
     }
   }
+`;
+
+export const StyledContainer = styled.div`
+  width: ${({ width }) => width || '90%'};
+  height: ${({ height }) => height || '95%'};
+  ${getLayout}
+  overflow-wrap: anywhere;
 `;
