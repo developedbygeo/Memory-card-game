@@ -1,8 +1,9 @@
+import React from 'react';
 import Card from '../shared/UI/Card.styled';
 
-const Score = ({ type, score }) => {
+const Score = ({ type, score, BgClr }) => {
   return (
-    <Card>
+    <Card BgClr={BgClr}>
       <h2>
         {type} Score: <span>0</span>
       </h2>
@@ -10,4 +11,4 @@ const Score = ({ type, score }) => {
   );
 };
 
-export default Score;
+export default React.memo(Score);
