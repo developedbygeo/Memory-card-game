@@ -11,7 +11,7 @@ const ScoreBoard = () => {
   return (
     <StyledSection flexSettings={sectionFlexSettings} width="80%">
       <Score type="Current" />
-      <Score type="Best" />
+      <Score BgClr={'#ef4444'} type="Best" />
     </StyledSection>
   );
 };
