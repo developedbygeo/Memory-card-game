@@ -1,11 +1,21 @@
-const themeSettings = {
+export const darkTheme = {
   colors: {
-    main: '#171141',
-    headerBg: '#2f2f4c',
-    secondary: '#302f4d',
+    main: '#1e293b',
+    headerBg: '#30425f',
+    secondary: '#6482a6',
     white: '#fefefe',
-    offwhite: '#d6d6d6',
+    offwhite: '#f0f0f0',
+    ctaText: '#050505',
   },
 };
 
-export default themeSettings;
+export const lightTheme = {
+  colors: {
+    main: '#f0f0f0',
+    headerBg: '#ef4444',
+    secondary: '#1e293b',
+    white: '#fefefe',
+    offwhite: '#f0f0f0',
+    ctaText: '#050505',
+  },
+};
