@@ -3,6 +3,12 @@ import { flexMixin } from '../shared/mixins';
 
 const StyledHeader = styled.header`
   background: ${({ theme }) => theme.colors.headerBg};
+  position: relative;
+  & > button {
+    position: absolute;
+    right: 2%;
+    top: 30%;
+  }
   & > div {
     user-select: none;
     width: 90%;
