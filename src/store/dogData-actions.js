@@ -20,16 +20,16 @@ export const getDogData = () => {
       dispatch(
         uiActions.showNotification({
           status: 'success',
-          title: 'Success',
-          message: 'Data retrieved successfully from the server',
+          title: 'Success:',
+          message: 'Data retrieved successfully from the server.',
         })
       );
     } catch (err) {
       dispatch(
         uiActions.showNotification({
           status: 'error',
-          title: 'Error',
-          message: 'Error fetching data - please try again later',
+          title: 'Error:',
+          message: 'Error fetching data - please try again later.',
         })
       );
     }
