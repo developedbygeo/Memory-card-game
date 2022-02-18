@@ -20,7 +20,6 @@ const imageCard = css`
   cursor: pointer;
   transition: all 200ms ease-in-out;
   &:hover {
-    /* transform: scale(1.1); */
     box-shadow: 3px 5px 5px 5px;
     color: ${({ theme }) => theme.colors.cardSelect};
   }
