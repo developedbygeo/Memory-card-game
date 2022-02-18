@@ -1,7 +1,8 @@
+import React from 'react';
 import Card from '../shared/UI/Card.styled';
 
-const MemoryCard = () => {
-  return <Card></Card>;
+const MemoryCard = ({ children, imageCont }) => {
+  return <Card imageCont={imageCont}>{children}</Card>;
 };
 
-export default MemoryCard;
+export default React.memo(MemoryCard);
