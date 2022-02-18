@@ -17,12 +17,19 @@ export const getDogData = () => {
         return { key: index, path: image };
       });
       dispatch(dogDataActions.updateDogData({ data: transformedData }));
+      dispatch(
+        uiActions.showNotification({
+          status: 'success',
+          title: 'Success',
+          message: 'Data retrieved successfully from the server',
+        })
+      );
     } catch (err) {
       dispatch(
         uiActions.showNotification({
           status: 'error',
           title: 'Error',
-          message: 'Error fetching dog images - please try again later',
+          message: 'Error fetching data - please try again later',
         })
       );
     }
