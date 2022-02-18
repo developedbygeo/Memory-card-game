@@ -15,6 +15,7 @@ export const StyledSection = styled.section`
   height: ${({ height }) => height || '100%'};
   margin: auto;
   ${getLayout}
+  gap: ${({ customGap }) => customGap || 'inherit'};
 
   h2 {
     color: ${({ theme }) => theme.colors.offwhite};
