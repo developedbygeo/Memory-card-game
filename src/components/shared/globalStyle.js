@@ -23,6 +23,7 @@ header{
 }
 
 main{
+    position: relative;
     height: 87vh;
     width: 100vw;
     background: ${({ theme }) => theme.colors.main};
@@ -35,10 +36,8 @@ footer{
 }
 
 h1 {
-  font-size: 2.8rem;
-  font-family: 'Abril Fatface', cursive;
-
-
+  font-size: 3.7rem;
+  font-family: 'Indie Flower', cursive;
 }
 
 h2 {
@@ -52,7 +51,8 @@ h3 {
 }
 
 h2, h3{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.1rem;;
   font-weight: 700;
 }
 
@@ -66,7 +66,7 @@ div,
 li,
 a {
   font-size: 1.8rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 a {
