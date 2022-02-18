@@ -7,12 +7,7 @@ const sectionGridSettings = {
 };
 
 const CardBoard = () => {
-  return (
-    <StyledSection
-      width="90%"
-      gridSettings={sectionGridSettings}
-    ></StyledSection>
-  );
+  return <StyledSection width="90%" gridSettings={sectionGridSettings}></StyledSection>;
 };
 
 export default CardBoard;
