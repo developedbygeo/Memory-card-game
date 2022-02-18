@@ -7,7 +7,7 @@ import dogImage from '../../assets/shiba-dog.png';
 
 const Header = ({ onThemeChange, darkThemeEnabled }) => {
   const futureTheme = darkThemeEnabled ? 'light' : 'dark';
-  const themeIcon = darkThemeEnabled ? DarkIcon : LightIcon;
+  const themeIcon = darkThemeEnabled ? LightIcon : DarkIcon;
 
   return (
     <StyledHeader>
