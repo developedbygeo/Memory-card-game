@@ -20,6 +20,7 @@ export const StyledSection = styled.section`
     color: ${({ theme }) => theme.colors.offwhite};
     & > span {
       color: ${({ theme }) => theme.colors.white};
+      font-weight: 700;
     }
   }
 `;
