@@ -46,7 +46,7 @@ const getCardStyling = ({ max }) => {
 const Card = styled.div`
   padding: 2rem;
   border-radius: 1rem;
-  background: ${({ theme, BgClr }) => BgClr || theme.colors.cardClr};
+  background: ${({ theme, BgClr }) => BgClr || theme.colors.cardBgClr};
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
   ${getCardStyling}
   ${isImageCard}
