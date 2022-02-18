@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import useInitial from './hooks/useInitial';
+
 import { getDogData } from './store/dogData-actions';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './components/shared/globalStyle';
@@ -7,25 +7,13 @@ import { lightTheme, darkTheme } from './components/shared/themeSettings';
 import Modal from './components/shared/UI/Modal/Modal';
 import { IntroDialogue } from './components/shared/UI/Modal/Dialogues';
 import Header from './components/Header/Header';
+import Notification from './components/shared/UI/Notification/Notification';
 import ScoreBoard from './components/Score/ScoreBoard';
 import CardBoard from './components/Cards/CardBoard';
 
 function App() {
-  const [showIntro, setShowIntro] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-  const dispatch = useDispatch();
-
-  const themeChangeHandler = useCallback(() => setIsDarkTheme((prevState) => !prevState), []);
-
-  useEffect(() => {
-    setShowIntro(true);
-  }, []);
-
-  useEffect(() => {
-    dispatch(getDogData());
-  }, [dispatch]);
-
-  const disableModalHandler = useCallback(() => setShowIntro((prevState) => !prevState), []);
+  const { theme, intro, disableModalHandler, shouldNotificationRender, notificationData } =
+    useInitial(getDogData);
 
   const introModal = (
     <Modal onDisable={disableModalHandler} purpose="intro">
@@ -34,13 +22,14 @@ function App() {
   );
 
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+    <ThemeProvider theme={theme.status ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Header onThemeChange={themeChangeHandler} darkThemeEnabled={isDarkTheme} />
-      {showIntro && introModal}
+      <Header onThemeChange={theme.handler} darkThemeEnabled={theme.status} />
+      {intro.status && introModal}
       <main>
         <ScoreBoard />
         <CardBoard />
+        {shouldNotificationRender && <Notification {...notificationData} />}
       </main>
     </ThemeProvider>
   );
