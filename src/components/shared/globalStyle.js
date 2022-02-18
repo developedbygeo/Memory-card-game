@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { gridMixin } from './mixins';
+import { flexMixin } from './mixins';
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -24,15 +24,11 @@ header{
 
 main{
     position: relative;
-    height: 87vh;
+    height: 90vh;
     width: 100vw;
     background: ${({ theme }) => theme.colors.main};
-    ${gridMixin('1fr', '0.15fr 1fr')};
-}
-
-footer{
-    height: 3vh;
-    width: 100%;
+    ${flexMixin('center', 'center', 'column')};
+    gap: 1rem;
 }
 
 h1 {
