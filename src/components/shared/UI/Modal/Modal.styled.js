@@ -6,7 +6,7 @@ const max = css`
   height: 100%;
 `;
 
-const houdiniAct = keyframes`
+export const houdiniAct = keyframes`
 from{
   opacity: 0;
 }
@@ -50,6 +50,15 @@ const modalStyle = css`
     color: ${({ theme }) => theme.colors.headerBg};
     font-weight: bold;
     text-decoration: underline;
+  }
+  h2 {
+    color: ${({ theme }) => theme.colors.headerBg};
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 3rem;
+    margin-block: 1rem;
   }
 `;
 
