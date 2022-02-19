@@ -1,5 +1,5 @@
 import { uiActions } from './ui-slice';
-import { dogDataActions } from './dogData-slice';
+import { dogSliceActions } from './dogData-slice';
 
 export const getDogData = () => {
   return async (dispatch) => {
@@ -14,9 +14,9 @@ export const getDogData = () => {
     try {
       const fetchedData = await fetchData();
       const transformedData = fetchedData.message.map((image, index) => {
-        return { key: index, path: image };
+        return { path: image, key: index, clicked: false };
       });
-      dispatch(dogDataActions.updateDogData({ data: transformedData }));
+      dispatch(dogSliceActions.updateDogData({ data: transformedData }));
       dispatch(
         uiActions.showNotification({
           status: 'success',
