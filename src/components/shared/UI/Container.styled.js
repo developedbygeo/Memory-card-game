@@ -13,6 +13,7 @@ const getLayout = ({ flexSettings, gridSettings }) => {
 export const StyledSection = styled.section`
   width: ${({ width }) => width || '100%'};
   height: ${({ height }) => height || '100%'};
+  min-height: ${({ minHeight }) => minHeight || 'initial'};
   margin: auto;
   ${getLayout}
   gap: ${({ customGap }) => customGap || 'inherit'};
@@ -23,6 +24,12 @@ export const StyledSection = styled.section`
       color: ${({ theme }) => theme.colors.white};
       font-weight: 700;
     }
+  }
+  p {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    color: ${({ theme }) => theme.colors.cardBgClr};
   }
 `;
 
