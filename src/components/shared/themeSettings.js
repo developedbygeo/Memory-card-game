@@ -8,7 +8,7 @@ export const darkTheme = {
     offwhite: '#f0f0f0',
     ctaText: '#050505',
     cardBgClr: '#6482a6',
-    cardSelect: 'rgba(215, 221, 234, 0.25)',
+    cardSelect: 'rgba(215, 221, 234, 0.65)',
   },
 };
 
