@@ -1,4 +1,7 @@
-import { useSelector } from 'react-redux';
+import { useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { dogSliceActions } from '../../store/dogData-slice';
+import { scoreSliceActions } from '../../store/score-slice';
 
 import { StyledSection } from '../shared/UI/Container.styled';
 import { LoadingSpinner } from '../shared/UI/LoadingSpinner';
@@ -11,12 +14,26 @@ const sectionGridSettings = {
 
 const CardBoard = () => {
   const { fetched, data } = useSelector((state) => state.dogData);
+  const dispatch = useDispatch();
+
+  const dogCardHandler = useCallback(
+    (id) => {
+      const hasCardBeenClicked = data.find((dog) => dog.key === id).clicked;
+      dispatch(dogSliceActions.clickOnCard({ id }));
+      if (!hasCardBeenClicked) {
+        dispatch(scoreSliceActions.increment());
+      } else {
+        dispatch(scoreSliceActions.lost());
+        dispatch(dogSliceActions.resetFlags());
+      }
+    },
+    [data, dispatch]
+  );
 
   // TODO use fetched to either render dogCards or the loading spinner & err msg
-
   const dogCards = data.map((element) => (
-    <MemoryCard key={element.key} imageCont="true">
-      <img src={element.path} alt={`a lovely dog fetched online - ${element.key}/${data.length}`} />
+    <MemoryCard onDogSelection={dogCardHandler.bind(null, element.key)} key={element.key} imageCont="true">
+      <img src={element.path} alt={`a lovely dog that was found online - ${element.key}/${data.length}`} />
     </MemoryCard>
   ));
 
