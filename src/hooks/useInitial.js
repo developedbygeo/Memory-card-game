@@ -1,6 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { IntroDialogue } from '../components/shared/UI/Modal/Dialogues';
+import Modal from '../components/shared/UI/Modal/Modal';
+
 const useInitial = (fnToDispatch) => {
   const [showIntro, setShowIntro] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
@@ -40,6 +43,12 @@ const useInitial = (fnToDispatch) => {
   //modal disable
   const disableModalHandler = useCallback(() => setShowIntro((prevState) => !prevState), []);
 
+  const introModal = (
+    <Modal onDisable={disableModalHandler} purpose="intro">
+      <IntroDialogue onDisable={disableModalHandler} />
+    </Modal>
+  );
+
   return {
     theme: {
       status: isDarkTheme,
@@ -49,9 +58,9 @@ const useInitial = (fnToDispatch) => {
       status: showIntro,
       handler: setShowIntro,
     },
-    disableModalHandler,
     shouldNotificationRender,
     notificationData: notification,
+    introModal,
   };
 };
 
