@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { dogSliceActions } from '../../store/dogData-slice';
 import { scoreSliceActions } from '../../store/score-slice';
 
@@ -38,7 +39,11 @@ const CardBoard = () => {
 
   const dogCards = data.map((element) => (
     <MemoryCard onDogSelection={dogCardHandler.bind(null, element.key)} key={element.key} imageCont="true">
-      <img src={element.path} alt={`a lovely dog that was found online - ${element.key}/${data.length}`} />
+      <img
+        src={element.path}
+        draggable="false"
+        alt={`a lovely dog that was found online - ${element.key}/${data.length}`}
+      />
     </MemoryCard>
   ));
 
