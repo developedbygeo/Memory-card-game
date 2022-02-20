@@ -22,6 +22,9 @@ const scoreSlice = createSlice({
       }
       state.currentScore = 0;
     },
+    reset() {
+      return initialScoreState;
+    },
   },
 });
 
