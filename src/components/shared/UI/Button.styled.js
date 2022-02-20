@@ -1,5 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { flexMixin } from '../mixins';
+
+const commonBtnStyling = css`
+  letter-spacing: 0.125rem;
+  padding: 0 3rem;
+  text-align: center;
+  max-width: 100%;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.ctaText};
+  align-self: ${({ alignSelf }) => alignSelf || 'inherit'};
+`;
 
 export const CtaButton = styled.button`
   align-items: center;
@@ -7,22 +17,16 @@ export const CtaButton = styled.button`
   border: 2px solid #111;
   border-radius: 1rem;
   box-sizing: border-box;
-  color: ${({ theme }) => theme.colors.ctaText};
   font-weight: bold;
-  cursor: pointer;
   display: flex;
   height: 5rem;
   justify-content: center;
-  letter-spacing: 0.125rem;
-  max-width: 100%;
-  padding: 0 3rem;
   position: relative;
-  text-align: center;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  align-self: ${({ alignSelf }) => alignSelf || 'inherit'};
+  ${commonBtnStyling}
 
   &:after {
     background-color: ${({ theme }) => theme.colors.headerBg};
@@ -50,6 +54,21 @@ export const CtaButton = styled.button`
 
   &:hover {
     outline: 0;
+  }
+`;
+
+export const SecondaryButton = styled.button`
+  ${commonBtnStyling}
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid;
+  border-color: ${({ theme }) => theme.colors.headerBg};
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    border-width: 3.5px;
   }
 `;
 
