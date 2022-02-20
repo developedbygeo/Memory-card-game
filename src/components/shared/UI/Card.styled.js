@@ -1,23 +1,6 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { flexMixin } from '../mixins';
-
-const bumpText = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(0.9865);
-  }
-  30% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1.135);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
+import { bumpText } from '../animations';
 
 const maxCard = css`
   height: 100%;
@@ -67,7 +50,7 @@ const Card = styled.div`
   ${getCardStyling}
   ${isImageCard}
 
-  .bump {
+  &>.bump {
     animation: ${bumpText} 400ms ease-out;
   }
 `;
