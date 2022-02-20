@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { flexMixin } from '../../mixins';
-import { houdiniAct } from '../Modal/Modal.styled';
+import { houdiniAct } from '../../animations';
 
 const errorBg = css`
   background-color: #690000;
