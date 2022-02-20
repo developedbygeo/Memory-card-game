@@ -1,24 +1,17 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { flexMixin } from '../../mixins';
+import { starAnimations, houdiniAct } from '../../animations';
 
 const max = css`
   width: 100%;
   height: 100%;
 `;
 
-export const houdiniAct = keyframes`
-from{
-  opacity: 0;
-}
-to{
-  opacity: 1;
-}
-`;
-
 const getModalStyle = ({ purpose }) => {
   if (purpose === 'intro') {
     return flexMixin('space-between', 'flex-start', 'column');
   }
+  return flexMixin('center', 'flex-start', 'column');
 };
 
 const backdropStyle = css`
@@ -46,6 +39,11 @@ const modalStyle = css`
   &>button {
     align-self: flex-end;
   }
+  & > div {
+    width: 100%;
+    ${flexMixin('flex-end', 'flex-end', 'row')}
+    gap: 2rem;
+  }
   span {
     color: ${({ theme }) => theme.colors.headerBg};
     font-weight: bold;
@@ -59,6 +57,20 @@ const modalStyle = css`
     font-weight: 300;
     line-height: 3rem;
     margin-block: 1rem;
+  }
+  svg {
+    align-self: center;
+    width: 75%;
+    height: 50%;
+    #fwTertiary {
+      animation: ${houdiniAct} 6s ease-in-out infinite alternate-reverse;
+    }
+    #fwSecondary {
+      animation: ${houdiniAct} 5s ease-in-out infinite alternate-reverse;
+    }
+    #mainStar {
+      animation: ${starAnimations} 7s linear infinite;
+    }
   }
 `;
 
