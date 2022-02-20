@@ -1,11 +1,5 @@
-import styled, { keyframes } from 'styled-components/macro';
-const spinning = keyframes`
-from{
-    transform: rotate(0deg)
-}to{
-    transform: rotate(360deg);
-}
-`;
+import styled from 'styled-components/macro';
+import { spinning } from '../animations';
 
 const Spinner = styled.div`
   display: inline-block;
