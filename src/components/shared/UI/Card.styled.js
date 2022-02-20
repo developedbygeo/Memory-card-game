@@ -1,5 +1,23 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { flexMixin } from '../mixins';
+
+const bumpText = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9865);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.135);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 const maxCard = css`
   height: 100%;
@@ -13,12 +31,11 @@ const standardCard = css`
 
 const imageCard = css`
   ${flexMixin('center', 'center', 'row')}
-
   width: 100%;
   height: 100%;
   max-height: 25rem;
   cursor: pointer;
-  transition: all 200ms ease-in-out;
+
   &:hover {
     box-shadow: 3px 5px 5px 5px;
     color: ${({ theme }) => theme.colors.cardSelect};
@@ -49,6 +66,10 @@ const Card = styled.div`
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
   ${getCardStyling}
   ${isImageCard}
+
+  .bump {
+    animation: ${bumpText} 400ms ease-out;
+  }
 `;
 
 export default Card;
