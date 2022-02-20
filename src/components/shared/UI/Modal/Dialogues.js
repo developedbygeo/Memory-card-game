@@ -1,4 +1,5 @@
-import { CtaButton } from '../Button.styled';
+import { CtaButton, SecondaryButton } from '../Button.styled';
+import { ReactComponent as FireworksSVG } from '../../../../assets/fireworks.svg';
 
 export const IntroDialogue = ({ onDisable }) => {
   return (
@@ -12,6 +13,27 @@ export const IntroDialogue = ({ onDisable }) => {
       <CtaButton onClick={onDisable} alignSelf="flex-end">
         Got it
       </CtaButton>
+    </>
+  );
+};
+
+export const WinDialogue = ({ onDisable, onPlay }) => {
+  return (
+    <>
+      <FireworksSVG />
+      <h2>Woah!</h2>
+      <p>
+        Congratulations, <strong>you aced it</strong>! If you want to keep playing, you can do so by either
+        keeping the <span>same</span> images or getting <span>new</span> ones.
+      </p>
+      <div>
+        <SecondaryButton onClick={onDisable} title="Play again with the same images">
+          Keep the same images
+        </SecondaryButton>
+        <CtaButton onClick={onPlay} alignSelf="flex-end" title="Play again with new images">
+          Play with new images
+        </CtaButton>
+      </div>
     </>
   );
 };
