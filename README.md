@@ -1,8 +1,8 @@
 # Memory Card Game
 
 <div style="display: flex">
-<img src='./public/sample-v.png' height='550px' width='250px'/>
-<img style="align-self: center" src='./public/sample-h.png' height='250px' width='500px'/>
+<img src='./public/sample-v.png' height='550px' width='250px' alt='mobile viewport - portrait mode'/>
+<img style="align-self: center" src='./public/sample-h.png' height='250px' width='500px'alt='mobile viewport - landscape mode'/>
 </div>
 
 <br>
