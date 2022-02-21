@@ -1,8 +1,8 @@
 # Memory Card Game
 
 <div style="display: flex">
-<img src='./public/sample-v.png' height='550px' width='250px' alt='mobile viewport - portrait mode'/>
-<img style="align-self: center" src='./public/sample-h.png' height='250px' width='500px'alt='mobile viewport - landscape mode'/>
+<img src='./public/sample-v.png' height='550px' width='300px' alt='mobile viewport - portrait mode'/>
+<img style="align-self: center" src='./public/sample-h.png' height='250px' width='550px'alt='mobile viewport - landscape mode'/>
 </div>
 
 <br>
@@ -37,6 +37,7 @@ npm test
 ## <a id='features'></a>Features
 
 - Gallery-shuffling based on the Fisher-Yates algorithm.
+- Custom Redux thunk middleware to handle the HTTP requests.
 - Notification system for the HTTP request status.
 - Fallback UI.
 - Dynamic modal dialogues.
