@@ -37,6 +37,8 @@ npm test
 ## Features
 
 - Gallery-shuffling based on the Fisher-Yates algorithm.
+- Notification system for the HTTP request status.
+- Fallback UI.
 - Dynamic modal dialogues.
 - State-persisting themes.
 - API-fetched images.
