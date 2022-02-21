@@ -12,9 +12,9 @@ const Spinner = styled.div`
     height: 40px;
     margin: 0.4rem;
     border-radius: 50%;
-    border: 6px solid ${({ theme }) => theme.colors.secondary};
-    border-color: ${({ theme }) => theme.colors.secondary} transparent
-      ${({ theme }) => theme.colors.secondary} transparent;
+    border: 6px solid ${({ theme }) => theme.colors.spinnerClr};
+    border-color: ${({ theme }) => theme.colors.spinnerClr} transparent
+      ${({ theme }) => theme.colors.spinnerClr} transparent;
     animation: ${spinning} 2s linear infinite;
   }
 `;
