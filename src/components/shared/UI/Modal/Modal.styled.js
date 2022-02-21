@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+
+import { devices } from '../../breakpoints';
 import { flexMixin } from '../../mixins';
 import { starAnimations, houdiniAct } from '../../animations';
 
@@ -7,11 +9,38 @@ const max = css`
   height: 100%;
 `;
 
+const responsiveWin = css`
+  @media ${devices.mobileSS} {
+    width: 90vw;
+    padding: 2rem;
+  }
+  @media ${devices.tablet} {
+    justify-content: space-around;
+    & > svg {
+      height: 60%;
+    }
+  }
+  @media ${devices.laptopM} {
+    height: 75vh;
+    width: 60vw;
+  }
+  @media ${devices.landscapeMobileSS} {
+    width: 70vw;
+    height: 80vh;
+  }
+`;
+
 const getModalStyle = ({ purpose }) => {
   if (purpose === 'intro') {
     return flexMixin('space-between', 'flex-start', 'column');
   }
   return flexMixin('center', 'flex-start', 'column');
+};
+
+const getWinResponsiveStyle = ({ purpose }) => {
+  if (purpose === 'win') {
+    return responsiveWin;
+  }
 };
 
 const backdropStyle = css`
@@ -35,8 +64,8 @@ const modalStyle = css`
   border-radius: 1rem;
   min-height: 25vh;
   animation: ${houdiniAct} 400ms ease-in-out;
-  ${getModalStyle}
-  &>button {
+  ${getModalStyle};
+  & > button {
     align-self: flex-end;
   }
   & > div {
@@ -71,6 +100,18 @@ const modalStyle = css`
     #mainStar {
       animation: ${starAnimations} 7s linear infinite;
     }
+  }
+  @media ${devices.mobileSS} {
+    min-height: 50vh;
+    width: 80vw;
+    padding: 3rem;
+    ${getWinResponsiveStyle};
+    p {
+      line-height: 3rem;
+    }
+  }
+  @media ${devices.mobileS} {
+    min-height: 30vh;
   }
 `;
 
