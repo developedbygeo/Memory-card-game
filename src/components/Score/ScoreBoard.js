@@ -13,7 +13,7 @@ const ScoreBoard = () => {
   const { currentScore, savedBestScore } = useSelector((state) => state.score);
 
   return (
-    <StyledSection flexSettings={sectionFlexSettings} width="70%">
+    <StyledSection type="scoreboard" flexSettings={sectionFlexSettings} width="70%">
       <Score BgClr="#6482a6" type="Current" score={currentScore} />
       <Score BgClr="#ef4444" type="Best" score={savedBestScore} />
     </StyledSection>
