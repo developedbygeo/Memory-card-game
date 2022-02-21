@@ -9,6 +9,7 @@ export const darkTheme = {
     ctaText: '#050505',
     cardBgClr: '#6482a6',
     cardSelect: 'rgba(215, 221, 234, 0.65)',
+    spinnerClr: '#6482a6',
   },
 };
 
@@ -23,5 +24,6 @@ export const lightTheme = {
     ctaText: '#050505',
     cardClr: '#f0f0f0',
     cardSelect: 'rgba(242, 105, 105, 0.65)',
+    spinnerClr: '#ef4444',
   },
 };
