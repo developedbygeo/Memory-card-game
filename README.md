@@ -63,7 +63,7 @@ Contributions are certainly welcome. Please feel free to open an issue/PR if the
 
 ## Acknowledgements
 
-A massive thank you to The Odin Project & freeCodeCamp for their guidance and quality material.
+This project would not have been created if it was not for **Dog Ceo - Dog Api**. A massive thank you as well to The Odin Project for their guidance and quality material.
 
 ## License
 
