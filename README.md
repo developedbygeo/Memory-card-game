@@ -2,7 +2,7 @@
 
 <div style="display: flex">
 <img src='./public/sample-v.png' height='550px' width='250px'/>
-<img style="align-self: center" src='./public/sample-h.png' height='250px' width='475px'/>
+<img style="align-self: center" src='./public/sample-h.png' height='250px' width='500px'/>
 </div>
 
 <br>
