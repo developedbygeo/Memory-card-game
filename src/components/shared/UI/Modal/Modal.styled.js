@@ -113,6 +113,9 @@ const modalStyle = css`
   @media ${devices.mobileS} {
     min-height: 30vh;
   }
+  @media ${devices.laptop} {
+    width: 60vw;
+  }
 `;
 
 const getDivStyle = (props) => {
