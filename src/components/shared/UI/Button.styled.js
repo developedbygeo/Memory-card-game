@@ -73,9 +73,10 @@ export const SecondaryButton = styled.button`
 `;
 
 export const ThemeButton = styled.button`
-  padding: 2rem;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
+  padding: 3rem;
+  margin-right: 2rem;
   color: white;
   border: none;
   outline: none;
@@ -83,6 +84,7 @@ export const ThemeButton = styled.button`
   font-size: 2.5rem;
   background: transparent;
   transition: all 200ms ease-in-out;
+  text-align: center;
   cursor: pointer;
   ${flexMixin('center', 'center', 'row')};
 
