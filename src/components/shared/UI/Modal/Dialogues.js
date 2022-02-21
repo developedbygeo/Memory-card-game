@@ -7,8 +7,8 @@ export const IntroDialogue = ({ onDisable }) => {
       <h2>Welcome!</h2>
       <p>
         The rules are simple: Each time you click on an image, they shuffle. Click twice on the same image and
-        you <span>lose</span>. Else, you <span>earn</span> 1 point each time you click on an image that has
-        not been clicked before.
+        you <span>lose</span>. Else, you <span>earn</span> 1 point each time you click on one that has not
+        been clicked before.
       </p>
       <CtaButton onClick={onDisable} alignSelf="flex-end">
         Got it
@@ -28,10 +28,10 @@ export const WinDialogue = ({ onDisable, onPlay }) => {
       </p>
       <div>
         <SecondaryButton onClick={onDisable} title="Play again with the same images">
-          Keep the same images
+          Same images
         </SecondaryButton>
         <CtaButton onClick={onPlay} alignSelf="flex-end" title="Play again with new images">
-          Play with new images
+          New images
         </CtaButton>
       </div>
     </>
