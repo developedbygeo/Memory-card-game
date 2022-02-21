@@ -48,15 +48,23 @@ const CardBoard = () => {
   ));
 
   const loadingSuccess = (
-    <StyledSection width="70%" customGap="1rem" gridSettings={sectionGridSettings}>
+    <StyledSection type="cardboard" customWidth="70%" customGap="1rem" gridSettings={sectionGridSettings}>
       {fetched && dogCards}
     </StyledSection>
   );
 
   const loadingError = (
-    <StyledSection flexSettings={sectionFlexSettings} width="50%" customGap="1rem" minHeight="75vh">
-      <LoadingSpinner />
-      <p>Could not load data. Please refresh the page and try again.</p>
+    <StyledSection
+      hasError="true"
+      flexSettings={sectionFlexSettings}
+      customWidth="50%"
+      customGap="1rem"
+      minHeight="75vh"
+    >
+      <div>
+        <LoadingSpinner />
+        <p>Could not load data. Please refresh the page and try again.</p>
+      </div>
     </StyledSection>
   );
 
