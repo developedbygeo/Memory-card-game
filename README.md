@@ -34,7 +34,7 @@ Launch the **test server** in the interactive watch mode:
 npm test
 ```
 
-## Features
+## <a name='features'>Features</a>
 
 - Gallery-shuffling based on the Fisher-Yates algorithm.
 - Notification system for the HTTP request status.
@@ -44,7 +44,7 @@ npm test
 - API-fetched images.
 - Fully-responsive in both landscape & portrait mode.
 
-## Tech
+## <a name='tech'>Tech</a>
 
 - React
 - Redux Toolkit
