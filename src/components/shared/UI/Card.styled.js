@@ -1,6 +1,18 @@
 import styled, { css } from 'styled-components';
+
+import { devices } from '../breakpoints';
 import { flexMixin } from '../mixins';
 import { bumpText } from '../animations';
+
+const isImageCard = ({ imageCont }) => imageCont && imageCard;
+
+const getCardStyling = ({ max }) => {
+  if (max) {
+    return maxCard;
+  } else {
+    return standardCard;
+  }
+};
 
 const maxCard = css`
   height: 100%;
@@ -30,17 +42,24 @@ const imageCard = css`
     margin: auto;
     border-radius: 1rem;
   }
-`;
-
-const isImageCard = ({ imageCont }) => imageCont && imageCard;
-
-const getCardStyling = ({ max }) => {
-  if (max) {
-    return maxCard;
-  } else {
-    return standardCard;
+  @media ${devices.mobileSS} {
+    place-self: center;
+    max-width: 32vw;
+    max-height: 25vh;
+    padding: 1rem;
   }
-};
+  @media ${devices.mobileS} {
+    max-height: 25vh;
+    & > img {
+      height: 75%;
+    }
+  }
+  @media ${devices.mobileSS} {
+    & > img {
+      height: 70%;
+    }
+  }
+`;
 
 const Card = styled.div`
   padding: 2rem;
