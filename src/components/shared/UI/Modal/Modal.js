@@ -1,5 +1,6 @@
 import React from 'react';
 import reactDom from 'react-dom';
+
 import DynamicDiv from './Modal.styled';
 
 const modalContainer = document.querySelector('#overlay');
