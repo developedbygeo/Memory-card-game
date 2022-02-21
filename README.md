@@ -10,7 +10,7 @@
 
 A React-based, fully responsive memory card game. The **main goal** is to earn points, by clicking on images that have _not_ been clicked before. Each time you do, the images **shuffle**. However, if an image is clicked on twice, you lose.
 
-This project was a lovely chance to practise Redux Toolkit, Styled Components and custom React hooks. It features state-persisting themes and API-fetched dog images. For a detailed overview, please have a look at the [**Features**](##features) & [**Tech**](##tech) section.
+This project was a lovely chance to practise Redux Toolkit, Styled Components and custom React hooks. It features state-persisting themes and API-fetched dog images. For a detailed overview, please have a look at the [**Features**](#features) & [**Tech**](#tech) section.
 
 ## Installation
 
