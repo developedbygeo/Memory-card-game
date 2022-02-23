@@ -31,16 +31,18 @@ const imageCard = css`
   max-height: 25rem;
   cursor: pointer;
 
-  &:hover {
-    box-shadow: 3px 5px 5px 5px;
-    color: ${({ theme }) => theme.colors.cardSelect};
-  }
   & > img {
     min-width: 65%;
     width: content-width;
     height: 90%;
     margin: auto;
     border-radius: 1rem;
+  }
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 3px 5px 5px 5px;
+      color: ${({ theme }) => theme.colors.cardSelect};
+    }
   }
   @media ${devices.mobileSS} {
     place-self: center;

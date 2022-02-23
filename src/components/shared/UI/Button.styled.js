@@ -88,8 +88,10 @@ export const ThemeButton = styled.button`
   cursor: pointer;
   ${flexMixin('center', 'center', 'row')};
 
-  &:hover {
-    background: rgba(255, 255, 255, 0.15);
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
   }
   & > svg {
     pointer-events: none;
