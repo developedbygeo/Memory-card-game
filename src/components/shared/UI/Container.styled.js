@@ -6,6 +6,12 @@ import { devices } from '../breakpoints';
 const constrainedScore = css`
   width: 70vw;
   justify-content: space-between;
+  @media ${devices.landscapeMobileM} {
+    width: 60vw;
+  }
+  @media ${devices.laptop} {
+    width: 50vw;
+  }
 `;
 
 const responsiveError = css`
@@ -34,10 +40,10 @@ const cardBoardStyling = css`
     width: 70vw;
   }
   @media ${devices.landscapeMobileM} {
-    width: 70vw;
+    width: 60vw;
   }
   @media ${devices.laptop} {
-    width: 70vw;
+    width: 50vw;
     height: 80vh;
     gap: 0.5rem;
     flex: 8;
