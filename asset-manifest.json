@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/Memory-card-game/static/js/main.0723259b.js",
+    "main.js": "/Memory-card-game/static/js/main.0fa8c373.js",
     "static/media/shiba-dog.png": "/Memory-card-game/static/media/shiba-dog.2330e3ddc4cee183446b.png",
     "static/media/fireworks.svg": "/Memory-card-game/static/media/fireworks.99e2b4373c942146e85bcbd4664046a5.svg",
     "index.html": "/Memory-card-game/index.html",
-    "main.0723259b.js.map": "/Memory-card-game/static/js/main.0723259b.js.map"
+    "main.0fa8c373.js.map": "/Memory-card-game/static/js/main.0fa8c373.js.map"
   },
   "entrypoints": [
-    "static/js/main.0723259b.js"
+    "static/js/main.0fa8c373.js"
   ]
 }
